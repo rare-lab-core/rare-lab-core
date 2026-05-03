@@ -39,62 +39,11 @@ const akshay = {
   pronouns:   "he/him",
   role:       "Founder + Designer + Builder",
   building:   "Rare.lab — visual shader editor that compiles to standalone code",
-  background: ["IIT Delhi (Math & Computing)", "Microsoft", "Superblocks", "frog", "Trinkerr", "RepCard"],
+  background: ["IIT Delhi (Math & Computing)", "Fuxam" " Cartedo" "Microsoft", "Superblocks", "frog", "Trinkerr", "RepCard"],
   craft:      ["UI/UX", "Design Systems", "WebGL/GLSL", "3D Motion", "Compilers"],
   tools:      ["TypeScript", "React 19", "Next.js", "Three.js", "Tailwind", "Blender", "Figma"],
-  philosophy: "Designers should ship beautiful work without writing GLSL.",
-  superpower: "Reading the canvas, not the diff.",
 };
 ```
-
-I'm a designer who learned to build. Nine years pushing pixels at Microsoft, Superblocks, frog, and four other companies. IIT Delhi (Mathematics & Computing) — left in fourth year, kept the engineering. ~40k Dribbble followers, 3× MVP Designer of the Week. Now I'm building **Rare.lab** with my sister Pooja and a sharpened AI engineering harness — taking what only the top 0.1% of GPU engineers can do and giving designers the tool to do it in a node graph.
-
-> **The mission:** put the power back in the creator's hand.
-
----
-
-## 🟣 Currently building — [Rare.lab](https://rare.lab)
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### What it is
-
-**An intelligent node-based shader editor for products.** The WebGL effects you see on Stripe, Linear, every award-winning website. We give the power back to the designer.
-
-Drag visual nodes onto a canvas. Connect them. Tweak in real-time. Hit export.
-
-**Two paths:**
-- 🪄 Copy a link, embed it on your website
-- 🧱 Compiler outputs two TypeScript files the enterprise owns forever
-
-The same playbook Rive ran for animation, but for shaders.
-
-</td>
-<td width="50%" valign="top">
-
-### What we shipped (51 days)
-
-| Surface | Volume |
-|---|---|
-| Shader primitives | **373** |
-| Material classes | **332** |
-| Compositor source files | **458** |
-| Compiler stages | **12** |
-| Framework targets | **5** |
-| SDK runtime budget | **<25 KB** |
-| Codified rules | **36** |
-| Specialist AI skills | **47** |
-| Operating manual | **654 lines** |
-
-Two people. AI engineering harness as the third teammate.
-
-</td>
-</tr>
-</table>
-
----
 
 ## 🛠️ Tech stack
 
@@ -190,18 +139,6 @@ Two people. AI engineering harness as the third teammate.
 
 ---
 
-## 🏅 Recognition
-
-- 3× **MVP Designer of the Week** on Dribbble
-- ~**40,000 followers** on Dribbble
-- Daily presence in the **global Popular feed**
-- IIT Delhi (Mathematics & Computing) — admitted via JEE
-- Camberwell College of Arts (UAL) — internship under Prof. Simon Maidment
-- AIESEC Mauritius — Team Leader (Fundraising & Marketing)
-- 822 GitHub contributions in a single day
-
----
-
 ## 🌐 Connect
 
 <p align="left">
@@ -232,7 +169,6 @@ Two people. AI engineering harness as the third teammate.
 - **Designers should ship beautiful work without writing GLSL.** That's the entire bet behind Rare.lab.
 - **The visual layer of the internet is going to be immersive.** I want to be at the forefront of that transformation.
 - **Two people + a sharpened AI partner can outship a ten-person team.** Done it for 51 days. Will do it for the next 10 years.
-- **Code you own forever beats code you rent.** That's the moat behind our compiler.
 
 ---
 
