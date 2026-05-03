@@ -23,19 +23,6 @@
 
 ---
 
-## 👋 About me
-
-```ts
-const akshay = {
-  pronouns:   "he/him",
-  role:       "Founder + Designer + Builder",
-  building:   "Rare.lab — visual shader editor that compiles to standalone code",
-  background: ["IIT Delhi (Math & Computing)", "Fuxam" " Cartedo" "Microsoft", "Superblocks", "frog", "Trinkerr", "RepCard"],
-  craft:      ["UI/UX", "Design Systems", "WebGL/GLSL", "3D Motion", "Compilers"],
-  tools:      ["TypeScript", "React 19", "Next.js", "Three.js", "Tailwind", "Blender", "Figma"],
-};
-```
-
 ## 🛠️ Tech stack
 
 ### Languages
