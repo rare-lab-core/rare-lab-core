@@ -1,16 +1,245 @@
-## Hi there 👋
-
 <!--
-**rare-lab-core/rare-lab-core** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+  ============================================================
+  GitHub Profile README for Akshay Hooda (rare-lab-core)
+  Renders on: https://github.com/rare-lab-core
+  ============================================================
+  Deployment:
+    1. Paste the entire contents of this file as README.md inside
+       https://github.com/rare-lab-core/rare-lab-core
+    2. Commit. The README auto-renders at github.com/rare-lab-core.
+  All widget usernames and social links are pre-wired. No find-replace needed.
+  ============================================================
 -->
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=180&section=header&text=Akshay%20Hooda&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Designer-founder%20%C2%B7%20Building%20Rare.lab%20%E2%80%94%20Rive%20for%20shaders&descAlignY=58&descSize=18" alt="Akshay Hooda header" />
+</p>
+
+<p align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1200&color=E879F9&center=true&vCenter=true&width=720&lines=Designer.+Founder.+Builder.;9+years+at+Microsoft%2C+Superblocks%2C+frog%2C+Trinkerr;Building+Rare.lab+%E2%80%94+visual+shader+editor;Two+founders.+51+days.+Production-grade+everything." alt="Akshay typing tagline" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=rare-lab-core&label=Profile%20views&color=E879F9&style=for-the-badge" alt="Profile views" />
+  <a href="https://github.com/rare-lab-core?tab=followers">
+    <img src="https://img.shields.io/github/followers/rare-lab-core?label=Followers&style=for-the-badge&color=E879F9" alt="Followers" />
+  </a>
+  <img src="https://img.shields.io/badge/Status-Building%20Rare.lab-7C3AED?style=for-the-badge" alt="Status" />
+  <img src="https://img.shields.io/badge/YC-S26%20Applicant-22D3EE?style=for-the-badge" alt="YC S26" />
+</p>
+
+---
+
+## 👋 About me
+
+```ts
+const akshay = {
+  pronouns:   "he/him",
+  role:       "Founder + Designer + Builder",
+  building:   "Rare.lab — visual shader editor that compiles to standalone code",
+  background: ["IIT Delhi (Math & Computing)", "Microsoft", "Superblocks", "frog", "Trinkerr", "RepCard"],
+  craft:      ["UI/UX", "Design Systems", "WebGL/GLSL", "3D Motion", "Compilers"],
+  tools:      ["TypeScript", "React 19", "Next.js", "Three.js", "Tailwind", "Blender", "Figma"],
+  philosophy: "Designers should ship beautiful work without writing GLSL.",
+  superpower: "Reading the canvas, not the diff.",
+};
+```
+
+I'm a designer who learned to build. Nine years pushing pixels at Microsoft, Superblocks, frog, and four other companies. IIT Delhi (Mathematics & Computing) — left in fourth year, kept the engineering. ~40k Dribbble followers, 3× MVP Designer of the Week. Now I'm building **Rare.lab** with my sister Pooja and a sharpened AI engineering harness — taking what only the top 0.1% of GPU engineers can do and giving designers the tool to do it in a node graph.
+
+> **The mission:** put the power back in the creator's hand.
+
+---
+
+## 🟣 Currently building — [Rare.lab](https://rare.lab)
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### What it is
+
+**An intelligent node-based shader editor for products.** The WebGL effects you see on Stripe, Linear, every award-winning website. We give the power back to the designer.
+
+Drag visual nodes onto a canvas. Connect them. Tweak in real-time. Hit export.
+
+**Two paths:**
+- 🪄 Copy a link, embed it on your website
+- 🧱 Compiler outputs two TypeScript files the enterprise owns forever
+
+The same playbook Rive ran for animation, but for shaders.
+
+</td>
+<td width="50%" valign="top">
+
+### What we shipped (51 days)
+
+| Surface | Volume |
+|---|---|
+| Shader primitives | **373** |
+| Material classes | **332** |
+| Compositor source files | **458** |
+| Compiler stages | **12** |
+| Framework targets | **5** |
+| SDK runtime budget | **<25 KB** |
+| Codified rules | **36** |
+| Specialist AI skills | **47** |
+| Operating manual | **654 lines** |
+
+Two people. AI engineering harness as the third teammate.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🛠️ Tech stack
+
+### Languages
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![GLSL](https://img.shields.io/badge/GLSL-5586A4?style=for-the-badge&logo=opengl&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+### Frameworks & libraries
+![React](https://img.shields.io/badge/React%2019-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js%2016-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white)
+![R3F](https://img.shields.io/badge/R3F-000000?style=for-the-badge&logo=react&logoColor=61DAFB)
+![WebGL2](https://img.shields.io/badge/WebGL2-990000?style=for-the-badge&logo=webgl&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Radix UI](https://img.shields.io/badge/Radix%20UI-161618?style=for-the-badge&logo=radixui&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-433E38?style=for-the-badge&logoColor=white)
+![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)
+![React Flow](https://img.shields.io/badge/React%20Flow-FF0072?style=for-the-badge&logoColor=white)
+
+### Backend, infra, databases
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare%20R2-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+### Build, test, tooling
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![esbuild](https://img.shields.io/badge/esbuild-FFCF00?style=for-the-badge&logo=esbuild&logoColor=black)
+![Turbopack](https://img.shields.io/badge/Turbopack-EF4444?style=for-the-badge&logo=turbo&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+
+### AI engineering
+![Claude](https://img.shields.io/badge/Claude%20Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![Cursor](https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
+![GPT](https://img.shields.io/badge/GPT-412991?style=for-the-badge&logo=openai&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-000000?style=for-the-badge&logoColor=white)
+
+### Design tools
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white)
+![Cinema 4D](https://img.shields.io/badge/Cinema%204D-011A6A?style=for-the-badge&logo=maxon&logoColor=white)
+![After Effects](https://img.shields.io/badge/After%20Effects-9999FF?style=for-the-badge&logo=adobeaftereffects&logoColor=white)
+![Photoshop](https://img.shields.io/badge/Photoshop-31A8FF?style=for-the-badge&logo=adobephotoshop&logoColor=white)
+![Illustrator](https://img.shields.io/badge/Illustrator-FF9A00?style=for-the-badge&logo=adobeillustrator&logoColor=white)
+![DaVinci Resolve](https://img.shields.io/badge/DaVinci%20Resolve-233A51?style=for-the-badge&logo=davinciresolve&logoColor=white)
+![Spline](https://img.shields.io/badge/Spline-1B1B1F?style=for-the-badge&logo=spline&logoColor=white)
+![Framer](https://img.shields.io/badge/Framer-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![Webflow](https://img.shields.io/badge/Webflow-4353FF?style=for-the-badge&logo=webflow&logoColor=white)
+![Dribbble](https://img.shields.io/badge/Dribbble-EA4C89?style=for-the-badge&logo=dribbble&logoColor=white)
+
+---
+
+## 📊 GitHub stats
+
+<p align="center">
+  <img height="180" src="https://github-readme-stats.vercel.app/api?username=rare-lab-core&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&show_icons=true&rank_icon=github" alt="GitHub Stats" />
+  <img height="180" src="https://github-readme-streak-stats.herokuapp.com/?user=rare-lab-core&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+</p>
+
+<p align="center">
+  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rare-lab-core&theme=tokyonight&hide_border=true&layout=compact&langs_count=10&hide=html,css" alt="Top Languages" />
+</p>
+
+---
+
+## 📈 Contribution activity
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=rare-lab-core&theme=tokyo-night&hide_border=true&area=true&radius=8&custom_title=Contribution%20activity%20%E2%80%94%20last%2031%20days" alt="Activity Graph" />
+</p>
+
+---
+
+## 🏆 Trophies
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=rare-lab-core&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&row=1&column=8" alt="GitHub Trophies" />
+</p>
+
+---
+
+## 🏅 Recognition
+
+- 3× **MVP Designer of the Week** on Dribbble
+- ~**40,000 followers** on Dribbble
+- Daily presence in the **global Popular feed**
+- IIT Delhi (Mathematics & Computing) — admitted via JEE
+- Camberwell College of Arts (UAL) — internship under Prof. Simon Maidment
+- AIESEC Mauritius — Team Leader (Fundraising & Marketing)
+- 822 GitHub contributions in a single day
+
+---
+
+## 🌐 Connect
+
+<p align="left">
+  <a href="https://x.com/hooda_akshay_" target="_blank">
+    <img src="https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter" />
+  </a>
+  <a href="https://www.linkedin.com/in/callmeak/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://dribbble.com/akshayhooda" target="_blank">
+    <img src="https://img.shields.io/badge/Dribbble-EA4C89?style=for-the-badge&logo=dribbble&logoColor=white" alt="Dribbble" />
+  </a>
+  <a href="https://www.instagram.com/madeby_yaksha/" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
+  </a>
+  <a href="https://rare.lab" target="_blank">
+    <img src="https://img.shields.io/badge/Rare.lab-7C3AED?style=for-the-badge&logoColor=white" alt="Rare.lab" />
+  </a>
+  <a href="mailto:hooda.akshay11@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+</p>
+
+---
+
+## 💭 What I care about
+
+- **Designers should ship beautiful work without writing GLSL.** That's the entire bet behind Rare.lab.
+- **The visual layer of the internet is going to be immersive.** I want to be at the forefront of that transformation.
+- **Two people + a sharpened AI partner can outship a ten-person team.** Done it for 51 days. Will do it for the next 10 years.
+- **Code you own forever beats code you rent.** That's the moat behind our compiler.
+
+---
+
+<p align="center">
+  <i>Reading the canvas. Compiling the impossible. Shipping every day.</i>
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=80&section=footer" alt="footer" />
+</p>
