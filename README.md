@@ -21,15 +21,6 @@
   </a>
 </p>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=rare-lab-core&label=Profile%20views&color=E879F9&style=for-the-badge" alt="Profile views" />
-  <a href="https://github.com/rare-lab-core?tab=followers">
-    <img src="https://img.shields.io/github/followers/rare-lab-core?label=Followers&style=for-the-badge&color=E879F9" alt="Followers" />
-  </a>
-  <img src="https://img.shields.io/badge/Status-Building%20Rare.lab-7C3AED?style=for-the-badge" alt="Status" />
-  <img src="https://img.shields.io/badge/YC-S26%20Applicant-22D3EE?style=for-the-badge" alt="YC S26" />
-</p>
-
 ---
 
 ## 👋 About me
