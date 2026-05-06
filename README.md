@@ -10,19 +10,6 @@
   All widget usernames and social links are pre-wired. No find-replace needed.
   ============================================================
 -->
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=180&section=header&text=Akshay%20Hooda&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Designer-founder%20%C2%B7%20Building%20Rare.lab%20%E2%80%94%20Rive%20for%20shaders&descAlignY=58&descSize=18" alt="Akshay Hooda header" />
-</p>
-
-<p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1200&color=E879F9&center=true&vCenter=true&width=720&lines=Designer.+Founder.+Builder.;9+years+at+Microsoft%2C+Superblocks%2C+frog%2C+Trinkerr;Building+Rare.lab+%E2%80%94+visual+shader+editor;Two+founders.+51+days.+Production-grade+everything." alt="Akshay typing tagline" />
-  </a>
-</p>
-
----
-
 ## 🛠️ Tech stack
 
 ### Languages
