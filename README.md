@@ -136,11 +136,3 @@
 - **Two people + a sharpened AI partner can outship a ten-person team.** Done it for 51 days. Will do it for the next 10 years.
 
 ---
-
-<p align="center">
-  <i>Reading the canvas. Compiling the impossible. Shipping every day.</i>
-</p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=80&section=footer" alt="footer" />
-</p>
