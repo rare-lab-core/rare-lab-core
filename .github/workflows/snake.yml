@@ -13,9 +13,10 @@ permissions:
   contents: write
 
 jobs:
-  generate:
+  # Snake generation is isolated — must always succeed, even if metrics breaks.
+  snake:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
       - name: Generate contribution snake SVG (light + Rare-themed dark)
         uses: Platane/snk/svg-only@v3
@@ -25,24 +26,48 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#A78BFA&color_dots=#1a1a1f,#3a235e,#7C3AED,#A78BFA,#F97316
 
-      - name: Generate stats metrics (header + activity + community + repositories)
-        uses: lowlighter/metrics@latest
+      - name: Upload snake artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: snake-svgs
+          path: dist/
+
+  # Metrics generation in its own job so a Docker build failure doesn't kill the snake.
+  # Pinned to v3.34 — last release where the Docker image build is reliably reproducible.
+  metrics-stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    continue-on-error: true
+    steps:
+      - name: Generate stats metrics
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: ${{ github.repository_owner }}
-          filename: dist/metrics-stats.svg
+          filename: metrics-stats.svg
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Kolkata
           config_padding: 0, 8px
           config_display: regular
 
+      - name: Upload stats artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: metrics-stats
+          path: metrics-stats.svg
+
+  metrics-languages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    continue-on-error: true
+    steps:
       - name: Generate languages metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: ${{ github.repository_owner }}
-          filename: dist/metrics-languages.svg
+          filename: metrics-languages.svg
           template: classic
           base: ""
           config_timezone: Asia/Kolkata
@@ -54,10 +79,43 @@ jobs:
           plugin_languages_analysis_timeout: 15
           plugin_languages_categories: programming, markup
 
+      - name: Upload languages artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: metrics-languages
+          path: metrics-languages.svg
+
+  # Single publish step downloads all artifacts (whichever exist) and pushes to output branch.
+  publish:
+    needs: [snake, metrics-stats, metrics-languages]
+    if: always() && needs.snake.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Assemble dist/
+        run: |
+          mkdir -p dist
+          # Snake is mandatory — copy or fail.
+          cp artifacts/snake-svgs/*.svg dist/
+          # Metrics are best-effort — copy if present.
+          if [ -f artifacts/metrics-stats/metrics-stats.svg ]; then
+            cp artifacts/metrics-stats/metrics-stats.svg dist/
+          fi
+          if [ -f artifacts/metrics-languages/metrics-languages.svg ]; then
+            cp artifacts/metrics-languages/metrics-languages.svg dist/
+          fi
+          ls -la dist/
+
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
+          keep_history: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
