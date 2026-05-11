@@ -72,12 +72,7 @@
 ## 📊 GitHub stats
 
 <p align="center">
-  <img height="195" src="https://raw.githubusercontent.com/rare-lab-core/rare-lab-core/main/metrics-stats.svg" alt="Stats" />
   <img height="195" src="https://streak-stats.demolab.com?user=rare-lab-core&theme=transparent&hide_border=true&background=00000000&stroke=2A2A30&ring=A78BFA&fire=F97316&currStreakNum=F97316&currStreakLabel=A78BFA&sideNums=A78BFA&sideLabels=F5F5F7&dates=F5F5F799&date_format=M%20j%5B%2C%20Y%5D&border_radius=16" alt="Streak" />
-</p>
-
-<p align="center">
-  <img width="640" src="https://raw.githubusercontent.com/rare-lab-core/rare-lab-core/main/metrics-languages.svg" alt="Top Languages" />
 </p>
 
 ---
