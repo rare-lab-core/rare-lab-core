@@ -1,4 +1,4 @@
-name: Generate contribution snake
+name: Generate profile assets
 
 on:
   schedule:
@@ -15,15 +15,44 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
-      - name: Generate snake SVG (light + Rare-themed dark)
+      - name: Generate contribution snake SVG (light + Rare-themed dark)
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#A78BFA&color_dots=#1a1a1f,#3a235e,#7C3AED,#A78BFA,#F97316
+
+      - name: Generate stats metrics (header + activity + community + repositories)
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: ${{ github.repository_owner }}
+          filename: dist/metrics-stats.svg
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: Asia/Kolkata
+          config_padding: 0, 8px
+          config_display: regular
+
+      - name: Generate languages metrics
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: ${{ github.repository_owner }}
+          filename: dist/metrics-languages.svg
+          template: classic
+          base: ""
+          config_timezone: Asia/Kolkata
+          plugin_languages: yes
+          plugin_languages_limit: 10
+          plugin_languages_ignored: html, css, scss, dockerfile, makefile, shell
+          plugin_languages_details: percentage
+          plugin_languages_indepth: yes
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_categories: programming, markup
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
