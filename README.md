@@ -98,10 +98,6 @@
 
 ---
 
-<!--
-  Trophies are temporarily hidden because the github-profile-trophy host is over
-  its quota (HTTP 402) right now. The daily profile-cards workflow snapshots this
-  card the moment the service responds again; uncomment this block to show it.
 ## 🏆 Trophies
 
 <p align="center">
@@ -109,7 +105,6 @@
 </p>
 
 ---
--->
 
 ## 🌐 Connect
 

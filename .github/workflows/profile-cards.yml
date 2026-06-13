@@ -19,7 +19,7 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       # Seed dist/ from the current output branch first. If any upstream source
       # is temporarily down, its last good image is preserved instead of going
@@ -63,8 +63,37 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
 
-      # Snapshot the live cards into static SVGs. Each response is validated as
-      # real SVG; a failed or non-SVG reply keeps the previous good image.
+      # Self-hosted trophies. Run the trophy project's own server inside the
+      # runner with the built-in token, then snapshot it with the original
+      # styling. No external trophy host to rate-limit, no extra token to manage.
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Self-host and snapshot trophies
+        env:
+          GITHUB_TOKEN1: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          owner='${{ github.repository_owner }}'
+          git clone --depth 1 https://github.com/ryo-ma/github-profile-trophy.git /tmp/trophy
+          ( cd /tmp/trophy && deno cache main.ts && deno run -A main.ts ) &
+          server_pid=$!
+          url="http://localhost:8080/?username=${owner}&theme=algolia&no-frame=true&no-bg=true&margin-w=8&row=3&column=6&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C"
+          ok=""
+          for i in $(seq 1 45); do
+            if curl -fsSL -m 30 "$url" -o dist/trophy.new 2>/dev/null && grep -qi "<svg" dist/trophy.new; then
+              mv dist/trophy.new dist/trophy.svg
+              echo "trophy: self-hosted render OK ($(wc -c < dist/trophy.svg) bytes)"
+              ok=1; break
+            fi
+            sleep 2
+          done
+          if [ -z "$ok" ]; then echo "trophy: render unavailable, kept previous image"; rm -f dist/trophy.new; fi
+          kill "$server_pid" 2>/dev/null || true
+
+      # Snapshot the remaining live cards into static SVGs. Each response is
+      # validated as real SVG; a failed or non-SVG reply keeps the previous image.
       - name: Snapshot live cards
         run: |
           owner='${{ github.repository_owner }}'
@@ -80,7 +109,6 @@ jobs:
           }
           snapshot streak   "https://streak-stats.demolab.com?user=${owner}&theme=transparent&hide_border=true&background=00000000&stroke=2A2A30&ring=A78BFA&fire=F97316&currStreakNum=F97316&currStreakLabel=A78BFA&sideNums=A78BFA&sideLabels=F5F5F7&dates=F5F5F799&date_format=M%20j%5B%2C%20Y%5D&border_radius=16"
           snapshot activity "https://github-readme-activity-graph.vercel.app/graph?username=${owner}&bg_color=00000000&color=A78BFA&line=7C3AED&point=F97316&area=true&area_color=7C3AED&hide_border=true&radius=16&custom_title=Contribution+activity"
-          snapshot trophy   "https://github-profile-trophy.vercel.app/?username=${owner}&theme=algolia&no-frame=true&no-bg=true&margin-w=8&row=3&column=6&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C"
           echo "=== final dist ===" && ls -la dist
 
       # Publish the whole folder to the output branch. Same mechanism the snake
