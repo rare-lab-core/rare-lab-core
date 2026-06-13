@@ -1,0 +1,95 @@
+name: Generate profile cards
+
+# Bakes every activity card into static SVGs on the output branch, served by
+# GitHub's CDN. Nothing on the profile depends on a live third-party render
+# server at view time, so embeds can never be rate-limited or fail to load.
+
+on:
+  schedule:
+    # Daily at 00:00 UTC (= 05:30 IST)
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Seed dist/ from the current output branch first. If any upstream source
+      # is temporarily down, its last good image is preserved instead of going
+      # blank, and the next run heals it automatically.
+      - name: Seed from current output branch
+        uses: actions/checkout@v4
+        continue-on-error: true
+        with:
+          ref: output
+          path: current
+
+      - name: Stage baseline
+        run: |
+          mkdir -p dist
+          cp -r current/. dist/ 2>/dev/null || true
+          rm -rf dist/.git
+          ls -la dist || true
+
+      # Contribution snake (light + Rare-themed dark).
+      - name: Generate snake SVG
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#A78BFA&color_dots=#1a1a1f,#3a235e,#7C3AED,#A78BFA,#F97316
+
+      # 3D isometric contribution calendar. Computed from the GitHub API inside
+      # the runner, so it has no external render-server dependency at all.
+      - name: Generate isometric calendar
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: ${{ github.repository_owner }}
+          filename: metrics.svg
+          output_action: none
+          base: ""
+          config_timezone: Asia/Kolkata
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+      - name: Stage calendar
+        run: cp metrics.svg dist/metrics.svg
+
+      # Snapshot the live cards into static SVGs. Each response is validated as
+      # real SVG; a failed or non-SVG reply keeps the previous good image.
+      - name: Snapshot live cards
+        run: |
+          owner='${{ github.repository_owner }}'
+          snapshot () {
+            name="$1"; url="$2"
+            if curl -fsSL -m 40 "$url" -o "dist/$name.new" && grep -qi "<svg" "dist/$name.new"; then
+              mv "dist/$name.new" "dist/$name.svg"
+              echo "$name: updated ($(wc -c < "dist/$name.svg") bytes)"
+            else
+              rm -f "dist/$name.new"
+              echo "$name: source unavailable, kept previous image"
+            fi
+          }
+          snapshot streak   "https://streak-stats.demolab.com?user=${owner}&theme=transparent&hide_border=true&background=00000000&stroke=2A2A30&ring=A78BFA&fire=F97316&currStreakNum=F97316&currStreakLabel=A78BFA&sideNums=A78BFA&sideLabels=F5F5F7&dates=F5F5F799&date_format=M%20j%5B%2C%20Y%5D&border_radius=16"
+          snapshot activity "https://github-readme-activity-graph.vercel.app/graph?username=${owner}&bg_color=00000000&color=A78BFA&line=7C3AED&point=F97316&area=true&area_color=7C3AED&hide_border=true&radius=16&custom_title=Contribution+activity"
+          snapshot trophy   "https://github-profile-trophy.vercel.app/?username=${owner}&theme=algolia&no-frame=true&no-bg=true&margin-w=8&row=3&column=6&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C"
+          echo "=== final dist ===" && ls -la dist
+
+      # Publish the whole folder to the output branch. Same mechanism the snake
+      # already used.
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
