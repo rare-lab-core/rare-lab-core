@@ -55,14 +55,13 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: ${{ github.repository_owner }}
           filename: metrics.svg
-          output_action: none
+          output_action: commit
+          committer_branch: profile-metrics
+          committer_message: "ci(profile): refresh isometric calendar"
           base: ""
           config_timezone: Asia/Kolkata
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-
-      - name: Stage calendar
-        run: cp metrics.svg dist/metrics.svg
 
       # Snapshot the live cards into static SVGs. Each response is validated as
       # real SVG; a failed or non-SVG reply keeps the previous good image.

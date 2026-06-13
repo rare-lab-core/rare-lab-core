@@ -74,7 +74,7 @@
 
 <p align="center">
   <img height="195" src="https://raw.githubusercontent.com/rare-lab-core/rare-lab-core/output/streak.svg" alt="Current streak" />
-  <img height="195" src="https://raw.githubusercontent.com/rare-lab-core/rare-lab-core/output/metrics.svg" alt="Contribution calendar" />
+  <img height="195" src="https://raw.githubusercontent.com/rare-lab-core/rare-lab-core/profile-metrics/metrics.svg" alt="Contribution calendar" />
 </p>
 
 ---
