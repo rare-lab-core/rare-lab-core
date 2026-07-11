@@ -73,7 +73,7 @@
 ## 📊 GitHub stats
 
 <p align="center">
-  <img height="195" src="https://raw.githubusercontent.com/rare-lab-core/rare-lab-core/output/streak.svg" alt="Current streak" />
+  <img height="195" src="https://raw.githubusercontent.com/captain-d-red/captain-d-red/output/streak.svg" alt="Current streak" />
 </p>
 
 ---
@@ -82,9 +82,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rare-lab-core/rare-lab-core/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/rare-lab-core/rare-lab-core/output/github-contribution-grid-snake.svg" />
-    <img alt="Contribution snake — regenerated daily" src="https://raw.githubusercontent.com/rare-lab-core/rare-lab-core/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/captain-d-red/captain-d-red/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/captain-d-red/captain-d-red/output/github-contribution-grid-snake.svg" />
+    <img alt="Contribution snake — regenerated daily" src="https://raw.githubusercontent.com/captain-d-red/captain-d-red/output/github-contribution-grid-snake-dark.svg" />
   </picture>
 </p>
 
@@ -93,7 +93,7 @@
 ## 📈 Contribution activity
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/rare-lab-core/rare-lab-core/output/activity.svg" alt="Contribution activity" />
+  <img src="https://raw.githubusercontent.com/captain-d-red/captain-d-red/output/activity.svg" alt="Contribution activity" />
 </p>
 
 ---
@@ -101,7 +101,7 @@
 ## 🏆 Trophies
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/rare-lab-core/rare-lab-core/output/trophy.svg" alt="GitHub trophies" />
+  <img src="https://raw.githubusercontent.com/captain-d-red/captain-d-red/output/trophy.svg" alt="GitHub trophies" />
 </p>
 
 ---
