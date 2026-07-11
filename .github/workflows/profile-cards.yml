@@ -107,7 +107,7 @@ jobs:
               echo "$name: source unavailable, kept previous image"
             fi
           }
-          snapshot streak   "https://streak-stats.demolab.com?user=${owner}&theme=transparent&hide_border=true&background=00000000&stroke=2A2A30&ring=A78BFA&fire=F97316&currStreakNum=F97316&currStreakLabel=A78BFA&sideNums=A78BFA&sideLabels=F5F5F7&dates=F5F5F799&date_format=M%20j%5B%2C%20Y%5D&border_radius=16"
+          snapshot streak   "https://streak-stats.demolab.com?user=${owner}&theme=transparent&hide_border=true&background=00000000&stroke=2A2A30&ring=A78BFA&fire=F97316&currStreakNum=F97316&currStreakLabel=A78BFA&sideNums=A78BFA&sideLabels=F5F5F7&dates=F5F5F799&date_format=M%20j%5B%2C%20Y%5D&border_radius=16&starting_year=2022"
           snapshot activity "https://github-readme-activity-graph.vercel.app/graph?username=${owner}&bg_color=00000000&color=A78BFA&line=7C3AED&point=F97316&area=true&area_color=7C3AED&hide_border=true&radius=16&custom_title=Contribution+activity"
           echo "=== final dist ===" && ls -la dist
 
